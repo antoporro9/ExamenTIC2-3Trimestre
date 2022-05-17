@@ -12,8 +12,9 @@ import random
 def mostrarmenu():
 
     print("****MENU****")
-    print("1.Guardar Asignatura" )
-    print("2.Ver nota media")
+    print("1.Guardar asignatura" )
+    print("2.Borrar asignatura")
+    print("3.Ver nota media")
     print("4.Ver todas las asignaturas")
     print("5.Salir")
     bandera=True
@@ -28,7 +29,7 @@ def mostrarmenu():
     if opc==5:
         print("Adiosito...")
     return opc
-opc=mostrarmenu()
+
 
 #Programa principal
 
@@ -95,3 +96,17 @@ def opcion3():
     media = total / contador
     
     return media
+
+#Ejercicio 7
+
+def opci(asignaturas):
+    print("********* Asignaturas matriculadas *********")
+    contador = 0
+
+    for i in asignaturas:
+        contador = contador + 1
+    
+    for i in range(0, contador):
+        print(i+1, ".", asignaturas[i])
+    
+    print("*** Fin asignaturas matriculadas ***")
