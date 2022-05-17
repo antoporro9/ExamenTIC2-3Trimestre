@@ -46,6 +46,9 @@ def opci1(asignaturas):
 
 #Ejercicio 4
 
+def opci2(asignaturas):
+    borrar=input("Asignatura que desea borrar")
+    asignaturas.remove(borrar)
 
 
 #Ejercicio 2
@@ -66,3 +69,29 @@ while (opc >= 1) and (opc < 5):
     opc = mostrarmenu()
 
 
+#Ejercicio 5
+
+def numRandom():
+    numrand = []
+    numnotas = int(input("¿Cuántas notas vas a introducir?: "))
+    num = 0
+
+    for i in range(0, numnotas):
+        num = random.randint(0, 10)
+        numrand.append(num)
+    
+    return numrand
+#Ejercicio6
+
+def opcion3():
+    numAle = numRandom()
+    total = 0
+    contador = 0
+
+    for i in numAle:
+        total = total + i
+        contador = contador + 1
+    
+    media = total / contador
+    
+    return media
